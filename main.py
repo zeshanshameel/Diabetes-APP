@@ -75,6 +75,8 @@ if st.button("Predict"):
     result = pred(Glucose,BloodPreassure,Age,BMI,Pregnancies,SkinThickness)
     if result == [1]:
         fin = "Diabetic"
+    if result == [0]:
+        fin = "Not Diabetic"
 st.success('The Person is {}'.format(fin))
 
 
