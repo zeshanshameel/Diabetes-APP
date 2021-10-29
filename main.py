@@ -53,9 +53,7 @@ if(BMI >= 30):
 
 from sklearn.model_selection import train_test_split
 # preprocessing the data and splitting
-scaler = preprocessing.MinMaxScaler()
-scaler.fit(x)
-x = pd.DataFrame(scaler.transform(x), index=x.index, columns=x.columns)
+x = pd.DataFrame(x, index=x.index, columns=x.columns)
 x_train, x_test, y_train, y_test = train_test_split(x, y,test_size=0.2, random_state=42)
 
 from sklearn.ensemble import RandomForestClassifier
